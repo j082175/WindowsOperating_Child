@@ -38,6 +38,13 @@ int _tmain(int argc, TCHAR* argv[])
 	CloseHandle(pi1.hThread);
 	CloseHandle(pi2.hThread);
 
+	// 자식 프로세스가 끝날때까지 기달려라
+	WaitForSingleObject(pi1.hProcess, INFINITE);
+	WaitForSingleObject(pi2.hProcess, INFINITE);
+	
+
+	//
+
 	GetExitCodeProcess(pi1.hProcess, &return_val1);
 	GetExitCodeProcess(pi2.hProcess, &return_val2);
 
