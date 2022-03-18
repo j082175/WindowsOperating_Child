@@ -13,8 +13,8 @@ int _tmain(int argc, TCHAR* argv[])
 	DWORD return_val1;
 	DWORD return_val2;
 
-	TCHAR command1[] = _T("PartAdder.exe 1 5");
-	TCHAR command2[] = _T("PartAdder.exe 6 10");
+	TCHAR command1[] = _T("Parent.exe 1 5"); //PartAdder
+	TCHAR command2[] = _T("Parent.exe 6 10"); //PartAdder
 
 	DWORD sum = 0;
 
